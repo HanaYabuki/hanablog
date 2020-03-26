@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.main-header{
+    padding: 40px;
+    text-align: center;
+    background-color: royalblue;
+    color: white;
+}
+.main-header h1{
+    font-size: 40px;
+    margin: 20px;
+}
+.main-header p{
+    margin-left: 100px;
+}
+.main-navbar{
+    overflow: hidden;
+    background-color: #1A1A1A;
+}
+.main-navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+}
+.main-navbar a.navbar-right{
+    float: right;
+}
+.main-navbar a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+
+/* 列容器 */
+.main-row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+}
+.main-side {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    background-color: #f1f1ff;
+    padding: 20px;
+}
+.main-main {   
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+    background-color: #dfdfff;
+    padding: 30px;
+}
+.main-img-head{
+    border: 4px dashed royalblue;
+    margin: 25px 80px;
+    height: 200px; width: 200px;
+}
+
+/* 博文链接处理 */
+.lnk{
+    margin: 20px 0px;
+    
+}
+.lnk-title{
+    font-size: 30px;
+}
+
+/* 图片 */
+.lnk-noimg{
+    padding: 4px;
+    border: 2px dashed black;
+    background-color: gray;
+    border-radius: 8px;
+    display: block;
+    height: 200px; 
+    width: 320px;
+    max-width: 100%;  
+    max-height: 100%;   
+}
+.lnk-img{
+    padding: 4px;
+    border: 2px dashed black;
+    border-radius: 8px;
+    display: inline-block;
+    height: 200px; 
+    width: auto;
+    max-width: 100%;  
+    max-height: 100%;     
+}
+
+/* 底部 */
+.main-bottom{
+    background-color: #f0f0ff;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    height: 60px;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 767px 时 */
+/*  让两栏上下堆叠显示 */
+@media screen and (max-width: 767px) {
+    .main-row {   
+        flex-direction: column;
+    }
+}

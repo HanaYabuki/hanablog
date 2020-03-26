@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #f1f1ff;
+}
+.txt-header{
+    padding: 10px;
+    text-align: center;
+    background-color: royalblue;
+    color: white;
+}
+.txt-header h1{
+    font-size: 40px;
+    margin: 20px;
+}
+.txt-header p{
+    margin-left: 100px;
+}
+.txt-navbar{
+    overflow: hidden;
+    background-color: #1A1A1A;
+}
+.txt-navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.txt-navbar a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+/* main内容定义 */
+.txt-main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.txt-main img{
+    margin: 8px 0;
+    padding: 8px;
+    border: 1px dashed black;
+    border-radius: 16px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+.txt-main h3{
+    font-size: 30px;
+}
+.txt-main h4{
+    font-size: 25px;
+}
+.txt-main h5{
+    font-size: 20px;
+}
+.txt-code{
+    margin: 8px 0;
+    padding: 0px 16px;
+    border: 2px dashed white;
+    border-radius: 16px;
+    background-color: #2A2A2A;
+}
+.txt-code pre{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.txt-footer{
+    text-align: center;
+}

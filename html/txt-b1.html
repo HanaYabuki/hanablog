@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Springboot的HelloWorld - 花枝丸的可爱博客！</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/txt-style.css">
+    </head>
+    <body>
+        <div class="txt-header">
+            <h1>使用 Spring-boot 创建第一个Application</h1>
+            <p>就是 Hello World ....</p>
+        </div>
+        <div class="txt-navbar"><a href="../index.html">回首页</a></div>
+        <div class="txt-main">
+            <h4>论如何使用万恶的IDEA创建程序....</h4>
+            <p>这他娘的就是IDEA</p>
+            <img src="../img/Blog01/万恶的IDEA.png" alt="">
+            <p>遵照如下步骤</p>
+            <img src="../img/Blog01/创建工程1.png" alt="">
+            <img src="../img/Blog01/创建工程2.png" alt="">
+            <img src="../img/Blog01/创建工程3.png" alt="">
+            <img src="../img/Blog01/创建工程4.png" alt="">
+            <p>初次使用需要导入Maven依赖，国内建议使用镜像</p>
+            <img src="../img/Blog01/maven设置1.png" alt="">
+            <img src="../img/Blog01/maven设置2.png" alt="">
+            <p>在Setting.xml中加入如下的镜像代码（似乎是阿里镜像）</p>
+            <div class="txt-code">
+<pre>
+&lt;mirror>
+    &lt;id>alimaven&lt;/id>
+    &lt;name>aliyun maven&lt;/name>
+    &lt;url>http://maven.aliyun.com/nexus/content/groups/public/&lt;/url>
+    &lt;mirrorOf>central&lt;/mirrorOf> 
+&lt;/mirror>
+</pre>
+            </div>
+            <p>然后就可以快乐的自动导包儿了~！</p>
+            <p>导完之后</p>
+            <img src="../img/Blog01/快乐界面.png" alt="">
+            <p>在DemoApplication中加入如下代码</p>
+            <div class="txt-code">
+<pre>
+package com.example.demo;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication //标注一个主程序，表明这是springboot应用
+@RestController
+public class DemoApplication {
+
+    public static void main(String[] args) {
+
+        //启动springboot应用
+        SpringApplication.run(DemoApplication.class, args);
+    }
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello World";
+    }
+}
+</pre>
+            </div>
+            <p>运行！~</p>
+            <p>这时可以打开浏览器，输入</p>
+            <div class="txt-code">
+<pre>
+localhost:8080/hello
+</pre>
+            </div>
+            <p>向浏览器发送请求即可</p>
+            <img src="../img/Blog01/运行结果.png" alt="">
+        </div>
+        <div class="txt-footer">
+            <p>编写时间：2020 - 3 - 25</p>
+        </div>
+    </body>
+</html>
