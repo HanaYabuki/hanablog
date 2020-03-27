@@ -10,7 +10,6 @@ body{
 .txt-header{
     padding: 10px;
     text-align: center;
-    background-color: royalblue;
     color: white;
 }
 .txt-header h1{
@@ -73,4 +72,19 @@ body{
 }
 .txt-footer{
     text-align: center;
+}
+
+/* 彩蛋！ */
+audio{
+    width: 80%;
+    margin: 0px 10%;
+}
+
+
+/* 响应式（并且是彩蛋） */
+@media screen and (max-width: 767px) {
+    audio {   
+        width: 100%;
+        margin: 0;
+    }
 }

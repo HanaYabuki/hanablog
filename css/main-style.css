@@ -7,7 +7,7 @@ a{
 .main-header{
     padding: 40px;
     text-align: center;
-    background-color: royalblue;
+    /*background-color: royalblue;*/
     color: white;
 }
 .main-header h1{
@@ -45,13 +45,13 @@ a{
 .main-side {
     -ms-flex: 25%; /* IE10 */
     flex: 25%;
-    background-color: #f1f1ff;
+    /*background-color: #f1f1ff;*/
     padding: 20px;
 }
 .main-main {   
     -ms-flex: 75%; /* IE10 */
     flex: 75%;
-    background-color: #dfdfff;
+    /*background-color: #dfdfff;*/
     padding: 30px;
 }
 .main-img-head{
