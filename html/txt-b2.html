@@ -14,6 +14,11 @@
         </div>
         <div class="txt-navbar"><a href="../index.html">回首页</a></div>
         <div class="txt-main" id="Main">
+            <p>BGM : V.A. - 鸟之诗 (八音盒版).mp3</p>
+            <audio controls>
+                <source src="../audio/V.A. - 鸟之诗 (八音盒版).mp3" type="audio/mp3">
+                您的浏览器不支持 audio 元素。
+            </audio>
             <h5>第一次一墩儿用这么多框架，踩了好多雷（嘤嘤嘤，哭唧唧</h5>
             <h4>！步入正题！</h4>
             <h3>超级框架大糅合！！！</h3>
@@ -62,7 +67,8 @@ mybatis.type-aliases-package=【你的Mapper包名】
 这里分开解释一下各个值的含义：
 spring.datasource.url ：
     数据库链接字符串，默认端口号为3306(有些手贱的可能会改过，这里温馨提示)，后面都是字面意思
-    值得注意的是，serverTimezone=Asia/Shanghai这句话用于选择时区，在6、7、8(大概？)的版本下会由于时区问题出现乱码Bug，可用这段代码解决(当然也可以用老版本)
+    值得注意的是，serverTimezone=Asia/Shanghai这句话用于选择时区，
+    在6、7、8(大概？)的版本下会由于时区问题出现乱码Bug，可用这段代码解决(当然也可以用老版本)
 spring.datasource.driver-class-name ：
     驱动类型 老版本中可能需要填入 oracle.jdbc.driver.OracleDriver 
 mybatis.type-aliases-package ：
