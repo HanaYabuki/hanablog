@@ -52,10 +52,7 @@ function ChangeColor(id,h,s,v){
     tmp = document.getElementById(id);
     try {
         tmp.style.backgroundColor = HSVtoRGB([h,s,v]);
-    } catch (error) {
-        
-    }
-    
+    } catch (error) { }
 }
 //3.开始魔改！
 function scrIndex(){
@@ -70,4 +67,5 @@ function scrAll(){
     h = (d.getMonth()*30+d.getDate()+d.getFullYear())%360;
     ChangeColor("Header",h,80,90);
     ChangeColor("Main",h,10,95);
+    document.body.style.backgroundColor = HSVtoRGB([h,40,95]);
 }
