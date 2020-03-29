@@ -10,7 +10,7 @@
         <meta charset="utf-8"/>
 
         <!-- Set the title bar of the page -->
-        <title>HanaBlog - AircraftWars</title>
+        <title>Created with GameMaker:Studio</title>
 
         <!-- Set the background colour of the document -->
         <style>
@@ -28,6 +28,7 @@
                       margin: 0px;
                       padding: 0px;
                       border: 0px;
+                      max-width: 100%;
             }
             :-webkit-full-screen #canvas {
                  width: 100%;
@@ -35,7 +36,11 @@
             }
             div.gm4html5_div_class
             {
-              margin: 0px;
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              margin-left: -240px;
+              margin-top: -360px;
               padding: 0px;
               border: 0px;
             }
@@ -62,27 +67,6 @@
             {
                  text-align: center;
             }
-
-            /* CHANGED */
-            #conta{
-                overflow: hidden;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .navbar{
-                overflow: hidden;
-                background-color: #404040; 
-            }
-            .navbar a{
-                background-color: #606060;
-                text-decoration: none;
-                float: left;
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 20px;
-            }
             /* END - Login Dialog Box */
             :-webkit-full-screen {
                width: 100%;
@@ -92,19 +76,14 @@
     </head>
 
     <body>
-        <div class="navbar">
-            <a href="../../index.html">BACK</a>
-        </div>
-        <div id="conta">
-            <div class="gm4html5_div_class" id="gm4html5_div_id">
-                <!-- Create the canvas element the game draws to -->
-                <canvas id="canvas" width="480" height="720">
-                <p>Your browser doesn't support HTML5 canvas.</p>
-                </canvas>
-            </div>
+        <div class="gm4html5_div_class" id="gm4html5_div_id">
+            <!-- Create the canvas element the game draws to -->
+            <canvas id="canvas" width="480" height="720">
+               <p>Your browser doesn't support HTML5 canvas.</p>
+            </canvas>
         </div>
 
         <!-- Run the game code -->
-        <script type="text/javascript" src="html5game/H5_AircraftWars.js?FXABC=571482509"></script>
+        <script type="text/javascript" src="html5game/H5_AircraftWars.js?VCWXB=900247433"></script>
     </body>
 </html>
