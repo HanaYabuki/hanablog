@@ -6,6 +6,7 @@ a{
 }
 body{
     background-color: #dfdfff;
+    margin: 0;
 }
 .txt-header{
     padding: 10px;
