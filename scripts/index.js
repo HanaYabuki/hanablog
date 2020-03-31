@@ -56,15 +56,13 @@ function ChangeColor(id,h,s,v){
 }
 //3.开始魔改！
 function scrIndex(){
-    var d = new Date();
-    h = (d.getMonth()*30+d.getDate()+d.getFullYear())%360;
+    var h = (new Date().getDate()*12)%360;
     ChangeColor("Header",h,80,90);
     ChangeColor("Side",h,40,95);
     ChangeColor("Main",h,10,95);
 }
 function scrAll(){
-    var d = new Date();
-    h = (d.getMonth()*30+d.getDate()+d.getFullYear())%360;
+    var h = (new Date().getDate()*12)%360;
     ChangeColor("Header",h,80,90);
     ChangeColor("Main",h,10,95);
     document.body.style.backgroundColor = HSVtoRGB([h,40,95]);
