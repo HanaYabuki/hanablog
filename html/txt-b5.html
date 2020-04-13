@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SpringBoot整合FreeMarker - 花枝丸的可爱博客！</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/txt-style.css">
+        <script src="../scripts/index.js"></script>
+    </head>
+    <body onload="scrAll()">
+        <div class="txt-header" id="Header">
+            <h1>SpringBoot整合FreeMarker</h1>
+            <p>皮毛而已，皮毛而已....</p>
+        </div>
+        <div class="txt-navbar"><a href="../index.html">回首页</a></div>
+        <div class="txt-main" id="Main">
+            <h3>SpringBoot整合FreeMarker</h3>
+            <h4>1.新建SpringBoot工程</h4>
+            <h4>2.在pom.xml添加FreeMarker依赖</h4>
+            <div class="txt-code">
+<pre>
+&lt;dependency>
+    &lt;groupId>org.springframework.boot&lt;/groupId>
+    &lt;artifactId>spring-boot-starter-freemarker&lt;/artifactId>
+&lt;/dependency>
+</pre>
+            </div>
+            <h4>3.编写实体类</h4>
+            <p>根目录下建立pojo包儿，新建Users类</p>
+            <div class="txt-code">
+<pre>
+package com.example.springbootfreemarker.pojo;
+
+public class Users {
+    private String userName;
+    private String userSex;
+    private String userAge;
+}
+</pre>
+            </div>
+            <p>右键Generate全自动封装一下</p>
+            <p>对了，别忘了写入有参和无参构造方法</p>
+            <div class="txt-code">
+<pre>
+    public Users(String userName, String userSex, String userAge) {
+        this.userName = userName;
+        this.userSex = userSex;
+        this.userAge = userAge;
+    }
+
+    public Users(){
+    }
+</pre>
+            </div>
+            <p>简简单单的无参（午餐），奥力给！</p>
+            <h4>4.编写Controller类</h4>
+            <p>根目录下建立Controller包，建立UserController类</p>
+            <div class="txt-code">
+<pre>
+package com.example.springbootfreemarker.controller;
+
+【好多好多import】
+
+@Controller
+public class UsersController {
+
+    // 处理请求 返回数据
+    @GetMapping("/showUsers")
+    public String showUsers(Model model){
+
+        List&lt;Users> list = new ArrayList&lt;>();
+
+        list.add(new Users("HZW","F","18"));
+        【这里当然就是随便写啦~】
+
+        model.addAttribute("【Key】",list);
+        
+        return "【动态网页名称(去掉扩展名)】";
+    }
+}
+</pre>
+            </div>
+            <p>这里有个小小的注意事项</p>
+            <p>model.addAttribute()中的Key需要和后文中的.ftlh文件中的表格相对应</p>
+            <p>具体含义后文再议</p>
+            <h4>5.编写动态页面</h4>
+            <p>新建一个动态网页，后缀名为【上个代码块里缺省的】.ftlh</p>
+            <p>（如果你想自找麻烦，可以不使用.ftlh后缀名，此时需要在application.properties里写入</p>
+            <div class="txt-code">
+<pre>
+spring.freemarker.suffix=.ftl
+</pre>
+            </div>
+            <p>来使用.ftl后缀名）</p>
+            <p>归入正题，在页面中使用 #list 的标签迭代 list，代码范例如下</p>
+            <div class="txt-code">
+<pre>
+&lt;#list 【Key】 as user>
+    &lt;tr>
+        &lt;td>${user.userName}&lt;/td>
+        &lt;td>${user.userSex}&lt;/td>
+        &lt;td>${user.userAge}&lt;/td>
+    &lt;/tr>
+&lt;/#list>
+</pre>
+            </div>
+            <p>注意那个Key，要换成你之前写好的Key值</p>
+            <h4>6.测试一下！</h4>
+            <img src="../img/Blog05/test.png" alt="">
+
+
+
+        </div>
+
+        <div class="txt-footer">
+            <p>修改时间：2020 - 4 - 13</p>
+        </div>
+    </body>
+</html>
